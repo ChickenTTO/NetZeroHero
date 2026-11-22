@@ -8,17 +8,23 @@ export default function Globe3D({ fallback }) {
   const [paused, setPaused] = useState(false)
   useEffect(() => {
     let cancelled = false
-    import('./createGlobeScene').then(({ createGlobeScene }) => {
+    const abort = new AbortController()
+    import('./createGlobeScene').then(async ({ createGlobeScene }) => {
       if (cancelled) return
       try {
-        controller.current = createGlobeScene(host.current, { onFailure: () => setReady(false) })
+        const scene = await createGlobeScene(host.current, {
+          signal: abort.signal,
+          onFailure: () => { if (!cancelled) setReady(false) },
+        })
+        if (cancelled) { scene.dispose(); return }
+        controller.current = scene
         setReady(true)
       } catch {
-        // Keep the original illustration visible on devices without WebGL.
-        setReady(false)
+        // Keep the static illustration visible on devices without WebGL.
+        if (!cancelled) setReady(false)
       }
     }).catch(() => { if (!cancelled) setReady(false) })
-    return () => { cancelled = true; controller.current?.dispose(); controller.current = null }
+    return () => { cancelled = true; abort.abort(); controller.current?.dispose(); controller.current = null }
   }, [])
   useEffect(() => { controller.current?.setPaused(paused) }, [paused, ready])
 

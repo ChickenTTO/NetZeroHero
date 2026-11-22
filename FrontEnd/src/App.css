@@ -187,6 +187,8 @@ h3 { font-size: 19px; line-height: 1.4; font-weight: 650; letter-spacing: -.3px;
 .button-login { background: transparent; border-color: var(--color-border-dark); color: var(--color-text-inverse); min-height: 44px; padding: 10px 18px; }
 .button-login:hover { border-color: var(--color-primary); background: #68ef3f0d; }
 .auth-dialog { width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid var(--color-border); border-radius: 24px; background: var(--color-page); color: var(--color-text); box-shadow: 0 24px 80px #0004; }
+.auth-dialog[data-mode='signup'] { overflow-y: auto; scrollbar-width: none; }
+.auth-dialog[data-mode='signup']::-webkit-scrollbar { display: none; }
 .auth-dialog::backdrop { background: #07150bc9; backdrop-filter: blur(5px); }
 .auth-panel { position: relative; padding: 40px 32px 28px; }
 .auth-close { position: absolute; right: 12px; top: 12px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--color-text); }

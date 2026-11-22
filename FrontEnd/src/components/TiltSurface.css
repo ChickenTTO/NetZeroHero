@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  perspective: 1000px;
+  perspective: 1400px;
   border-radius: inherit;
 }
 
@@ -21,12 +21,12 @@
   border-radius: inherit;
   transform-style: preserve-3d;
   transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
-  transition: transform 380ms cubic-bezier(.2, .7, .2, 1);
+  transition: transform 550ms cubic-bezier(.2, .7, .2, 1);
 }
 
 .tilt-surface[data-tilting='true'] > .tilt-surface-plane {
   will-change: transform;
-  transition-duration: 150ms;
+  transition-duration: 120ms;
 }
 
 .tilt-glare {
@@ -36,7 +36,7 @@
   border-radius: inherit;
   pointer-events: none;
   opacity: 0;
-  background: radial-gradient(circle at var(--tilt-pointer-x) var(--tilt-pointer-y), #edffe51f 0, #b9f48c08 35%, transparent 70%);
+  background: radial-gradient(ellipse at var(--tilt-pointer-x) var(--tilt-pointer-y), #fffef51c 0, #c9e8cd07 34%, transparent 65%);
   transform: translateZ(1px);
   transition: opacity 200ms ease;
 }
@@ -48,10 +48,10 @@
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .action-tilt .action-card, .market-tilt .market-card { transform-style: preserve-3d; }
   .action-tilt .action-card { overflow: visible; }
-  .action-tilt .action-art { border-radius: 15px 15px 0 0; transform: translateZ(12px); }
-  .market-tilt .market-mark { transform: translateZ(24px); }
-  .market-tilt h3 { transform: translateZ(12px); }
-  .action-tilt .tilt-glare, .market-tilt .tilt-glare { transform: translateZ(32px); }
+  .action-tilt .action-art { border-radius: 15px 15px 0 0; transform: translateZ(6px); }
+  .market-tilt .market-mark { transform: translateZ(18px); }
+  .market-tilt h3 { transform: translateZ(6px); }
+  .action-tilt .tilt-glare, .market-tilt .tilt-glare { transform: translateZ(24px); }
 }
 
 @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {

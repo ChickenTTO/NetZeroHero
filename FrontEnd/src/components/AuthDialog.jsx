@@ -33,7 +33,7 @@ export default function AuthDialog({ mode, onClose, onModeChange }) {
     setNotice('Dịch vụ tài khoản chưa được kết nối. Hiện chưa thể ' + (isSignUp ? 'tạo tài khoản' : 'đăng nhập') + '. Thông tin của bạn chưa được gửi hoặc lưu.')
   }
 
-  return <dialog ref={dialog} className="auth-dialog" aria-labelledby="auth-title" aria-describedby="auth-description" onCancel={onClose}>
+  return <dialog ref={dialog} className="auth-dialog" data-mode={mode} aria-labelledby="auth-title" aria-describedby="auth-description" onCancel={onClose}>
     <div className="auth-panel">
       <button className="auth-close" type="button" aria-label="Đóng cửa sổ tài khoản" onClick={onClose}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" /></svg></button>
       <span className="eyebrow">CÙNG NETZEROHEROS</span>
