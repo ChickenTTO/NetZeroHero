@@ -1,0 +1,386 @@
+=== PAGE 1 ===
+BỘ CÔNG THƯƠNG 
+TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI 
+TRƯỜNG KINH TẾ 
+─────────────── 
+CUỘC THI “SÁNG TẠO - KHỞI NGHIỆP VÌ TƯƠNG LAI BỀN 
+VỮNG 
+SE-HACKATHON CHALLENGE 2026” 
+BẢN THUYẾT MINH Ý TƯỞNG DỰ ÁN KHỞI NGHIỆP 
+TÊN DỰ ÁN: RELOOP VIETNAM 
+HỆ ĐIỀU HÀNH KINH TẾ TUẦN HOÀN B2B CHO PHẾ THẢI ĐẶC 
+THÙ VÀ TÍN CHỈ CARBON 
+Thuộc lĩnh vực: Kinh tế xanh, kinh tế tuần hoàn và phát triển bền vững; 
+Công nghệ số và trí tuệ nhân tạo 
+Tên nhóm dự thi: Net Zero Heroes 
+Họ và tên trưởng nhóm: Hoàng Liên Hương 
+Đơn vị: Khoa Tài chính – Ngân hàng, Trường Kinh tế, Đại học Công 
+nghiệp Hà Nội 
+ 
+Hà Nội, tháng 11/2026 
+
+=== PAGE 2 ===
+1. Thông tin về các thành viên tham gia dự án (không quá 05 thành viên 
+bao gồm cả trưởng nhóm): 
+TT Họ và tên Mã sinh viên Lớp Đơn vị đào tạo Vai trò trong dự án/ý tưởng Ghi chú 
+1 Hoàng Liên Hương [Điền MSV] [Điền lớp] Trường Kinh tế - ĐHCNHN 
+Trưởng nhóm – 
+Phụ trách Mô 
+hình tài chính, Kế 
+toán xanh & 
+Chứng từ E-
+Manifest 
+Trưởng 
+nhóm 
+2  [Điền MSV] [Điền lớp] Trường Kinh tế - ĐHCNHN 
+Phụ trách Nghiên 
+cứu thị trường, 
+Phân tích ESG & 
+Pháp lý môi 
+trường 
+Thành 
+viên 
+3  [Điền MSV] [Điền lớp] Trường Kinh tế - ĐHCNHN Phụ trách Vận hành Logistics ngược & Phát triển đối tác B2B Thành viên 
+4 [Thành viên 4 - nếu có] [Điền MSV] [Điền lớp] [Đơn vị đào tạo] 
+Phụ trách Thiết 
+kế giao diện sản 
+phẩm (UI/UX) & 
+Demo công nghệ 
+Thành 
+viên 
+ 
+2. Số điện thoại liên hệ (Trưởng nhóm): [Điền SĐT của bạn] 
+3. Email liên hệ (Trưởng nhóm): [Điền Email của bạn] 
+ 
+
+=== PAGE 3 ===
+TÓM TẮT DỰ ÁN / Ý TƯỞNG 
+1. Ý tưởng chính của dự án: 
+Xây dựng nền tảng B2B ReLoop Vietnam ứng dụng AI và dữ liệu số để thu 
+gom, định giá và điều phối tái chế ba dòng phế thải đặc thù (phế thải xây dựng, 
+pin/ắc quy xe điện, phụ phẩm nông nghiệp), đồng thời tự động hóa chứng từ môi 
+trường (E-Manifest) và quy đổi tín chỉ Carbon giúp doanh nghiệp tối ưu chi phí 
+và tiếp cận nguồn vốn tín dụng xanh. 
+2. Mô tả sản phẩm/dịch vụ và giá trị của dự án: 
+• Bối cảnh và vấn đề thị trường: Tại Việt Nam, đặc biệt là khu vực Hà Nội 
+và vùng kinh tế trọng điểm Bắc Bộ, mỗi năm phát sinh hàng tri ệu tấn phế 
+thải xây dựng (xà bần, bê tông vỡ), hàng trăm ngàn khối pin/ắc quy xe điện 
+hết vòng đời và lượng lớn phụ phẩm nông nghiệp (rơm rạ, trấu, vỏ cà phê). 
+Tuy nhiên, thị trường thu gom hiện nay hoàn toàn phân m ảnh, thiếu minh 
+bạch về giá, chi phí vận chuyển cao do xe chạy rỗng, và nghiêm trọng nhất là 
+doanh nghiệp phát thải thiếu bộ chứng từ xử lý rác đạt chuẩn pháp lý đ ể 
+quyết toán thuế, nghiệm thu công trình hay chứng minh tuân thủ ESG. 
+• Giải pháp công nghệ cốt lõi (ReLoop Platform): Thay vì hoạt động như 
+một trang rao vặt phế liệu truyền thống, ReLoop được thiết kế dưới dạng “Hệ 
+điều hành kinh tế tuần hoàn B2B” theo mô hình tinh g ọn không sở hữu tài 
+sản vật lý (Asset-Light Marketplace), tích hợp bốn tính năng đột phá: 
+• Định giá AI qua Camera (AI Computer Vision Estimation): Ngư ời 
+dùng quay video 10 giây quanh đống phế thải; thuật toán tự động tính toán thể 
+tích (m³), phân tích tỷ lệ tạp chất và khóa mức giá thu mua minh bạch ngay trên 
+ứng dụng. 
+• Điều phối Logistics ngược thông minh (Milk-run Routing): Gom nhiều 
+điểm phát thải nhỏ trên cùng tuyến đường bán kính 20–30 km để tối ưu tải trọng 
+xe, giảm 20%–25% chi phí vận chuyển. 
+• Hộ chiếu Rác thải & Chứng từ Môi trường tự động (E -Manifest & 
+Accounting Ledger): Tự động xuất biên b ản bàn giao ch ất thải điện tử hợp 
+chuẩn Bộ Tài nguyên và Môi trường cùng hóa đơn VAT tích hợp trực tiếp vào 
+phần mềm kế toán doanh nghiệp. 
+
+=== PAGE 4 ===
+• Ví Điểm Xanh & Cộng gộp Tín chỉ Carbon (Carbon Credit Pooling): 
+Quy đổi lượng phế thải tái chế thành lượng phát thải CO2e cắt giảm, cấp chứng 
+nhận “Hồ sơ năng lực xanh” (Green Score) h ỗ trợ doanh nghiệp vay vốn tín 
+dụng xanh lãi suất ưu đãi, đồng thời gom sản lượng Carbon nhỏ lẻ để bán sỉ ra 
+thị trường quốc tế. 
+• Giá trị kinh tế – xã hội mang lại: Biến khoản “chi phí chết” trong xử lý 
+chất thải của doanh nghiệp thành dòng tiền hoàn lại từ nguyên liệu thứ cấp 
+hoặc vật liệu tái chế chiết khấu; cung cấp nguồn cung đầu vào ổn định, phân 
+loại chuẩn cho các nhà máy tái chế; góp phần giảm thiểu nạn đổ trộm xà bần, 
+đốt rơm rạ gây bụi mịn và ô nhiễm kim loại nặng từ pin xe điện. 
+ 
+
+=== PAGE 5 ===
+NỘI DUNG CHÍNH CỦA DỰ ÁN 
+CHƯƠNG 1. SỰ CẦN THIẾT VÀ TÍNH ĐỔI MỚI SÁNG TẠO CỦA DỰ 
+ÁN 
+1.1. Thực trạng và “nỗi đau” của thị trường thu gom phế thải đặc thù 
+Trong tiến trình chuyển đổi xanh và thực thi cam kết phát thải ròng bằng 0 
+(Net-Zero) vào năm 2050 của Chính phủ Việt Nam, quản lý chất thải và kinh tế 
+tuần hoàn trở thành yêu cầu pháp lý bắt buộc đối với cộng đồng doanh nghiệp 
+theo Luật Bảo vệ Môi trường 2020 và cơ chế Trách nhiệm mở rộng của nhà sản 
+xuất (EPR). Qua nghiên cứu thị trường và khảo sát thực tế trong tháng 11/2026 
+tại địa bàn Hà Nội cùng các tỉnh công nghiệp lân cận, nhóm dự án nhận thấy ba 
+điểm nghẽn nghiêm trọng ở ba nhóm phế thải có tốc độ tăng trưởng nhanh 
+nhưng khó xử lý nhất: 
+• Nhóm 1 – Phế thải xây dựng (C&D Waste): Tốc độ đô thị hóa mạnh tại Hà 
+Nội tạo ra khối lượng khổng lồ bê tông vỡ, gạch vụn, thép thừa và gỗ cốp-
+pha thải loại. Các nhà th ầu xây d ựng thường phải trả từ 120.000đ – 
+180.000đ/m³ cho các đội xe ba gác, xe ben t ự phát để đổ bỏ. Hệ quả là tình 
+trạng đổ trộm xà bần diễn ra phổ biến, nhà thầu không có biên bản bàn giao 
+chất thải hợp lệ và hóa đơn VAT để quyết toán công trình, đối mặt với rủi ro 
+bị thanh tra môi trường xử phạt hàng trăm triệu đồng. Trong khi đó, các nhà 
+máy sản xuất gạch không nung và v ật liệu san lấp lại thiếu nguồn bê tông 
+nghiền đầu vào ổn định. 
+• Nhóm 2 – Pin và ắc quy xe điện (EV Battery & Lead -acid): Sự bùng nổ 
+của phương tiện giao thông điện tại Việt Nam kéo theo làn sóng pin hết vòng 
+đời sử dụng khi dung lượng giảm xuống dưới 70%–80%. Hiện nay, các gara 
+sửa chữa và đại lý xe điện giao dịch pin cũ hoàn toàn thủ công qua mạng xã 
+hội hoặc thương lái nhỏ lẻ, định giá cảm tính theo cân nặng mà không phân 
+loại được tình trạng sức khỏe pin (State of Health – SoH). Điều này gây lãng 
+phí lớn khi những khối pin còn khả năng tái sử dụng làm trạm lưu trữ năng 
+lượng (Second -life ESS) lại bị đem đi nghiền phá hủy, đồng thời tiềm ẩn 
+nguy cơ cháy nổ và rò rỉ kim loại nặng. 
+
+=== PAGE 6 ===
+• Nhóm 3 – Phụ phẩm nông nghiệp (Agricultural Biomass): Tại các vùng 
+nông nghiệp ven đô Hà Nội và đồng bằng Bắc Bộ (Phú Thọ, Bắc Ninh, Hưng 
+Yên, Hải Dương), hàng triệu tấn rơm rạ, trấu, vỏ nông sản sau thu hoạch vẫn 
+bị đốt bỏ trực tiếp ngoài đồng gây ô nhiễm bụi mịn nghiêm trọng, trong khi 
+các nhà máy viên nén sinh khối (Biomass) và trang trại phân hữu cơ gặp khó 
+khăn trong việc thu gom do tính chất mùa vụ, hàng cồng kềnh và chi phí vận 
+tải cao. 
+1.2. Đánh giá các giải pháp hiện có và khoảng trống thị trường (Market 
+Gap) 
+Trên thế giới, nhiều nền tảng B2B chuyên sâu cho t ừng loại phế thải đã 
+chứng minh tính hiệu quả vượt trội như Circunomics (Đức – sàn định giá vòng 
+đời thứ hai cho pin xe điện tích hợp phân tích dữ liệu BMS), AnyWaste (Anh – 
+nền tảng số hóa chứng từ vận chuyển chất thải xây dựng theo thời gian thực), 
+hay Ecostrat (Bắc Mỹ – sàn giao dịch hợp đồng sinh khối nông nghiệp). Tại Việt 
+Nam, các ứng dụng số về môi trường mới chỉ dừng ở mức thu gom rác sinh hoạt 
+hộ gia đình hoặc các trang danh bạ rao vặt phế liệu phổ thông (nhựa, giấy, sắt 
+vụn). Hoàn toàn chưa có một nền tảng B2B nào tích hợp đồng bộ quy trình định 
+giá bằng trí tuệ nhân tạo, tối ưu logistics ngược và tự động hóa chứng từ pháp lý 
+– kế toán xanh cho ba dòng phế thải đặc thù nêu trên. 
+1.3. Tính mới và sự đột phá sáng tạo của ReLoop Vietnam 
+ReLoop Vietnam không định vị mình là một “chợ ve chai trực tuyến” mà là 
+một “Hệ điều hành Tài chính – Tuần hoàn B2B”, tạo ra sự khác biệt thông qua 
+bốn đột phá sáng tạo: 
+• 1. Số hóa và tự động hóa chứng từ Kế toán – Môi trường (E-Manifest & 
+Green Ledger): Khách hàng doanh nghiệp giao dịch qua ReLoop được cấp 
+tự động biên bản bàn giao chất thải điện tử hợp chuẩn Bộ TN&MT và hóa 
+đơn điện tử VAT tích hợp thẳng vào sổ sách kế toán, giải quyết triệt để bài 
+toán quyết toán thuế và tuân thủ kiểm toán môi trường. 
+• 2. Công ngh ệ quét đo th ể tích và t ạp chất bằng Camera AI (AI 
+Computer Vision): Khắc phục nhược điểm thiếu cân trạm tại công trường 
+xây dựng hoặc ruộng đồng. Người dùng chỉ cần quay video 10 giây quanh 
+
+=== PAGE 7 ===
+đống phế thải, thuật toán 3D Photogrammetry sẽ ước tính thể tích (m³), nhận 
+diện tỷ lệ tạp chất và khóa mức giá thu mua minh bạch. 
+• 3. Mô hình đổi hàng tuần hoàn khép kín (Closed -Loop Barter): Thay vì 
+nhận tiền mặt lắt nhắt, nhà thầu xây dựng bán xà bần có thể tích lũy số dư 
+trên ví ReLoop để đổi trực tiếp lấy gạch không nung, cát nhân tạo tái chế từ 
+chính nhà máy đối tác với mức chiết khấu 10%–15%; hợp tác xã nông nghiệp 
+có thể đổi rơm rạ lấy phân bón hữu cơ. 
+• 4. Cơ chế gom nhóm Tín chỉ Carbon (Carbon Credit Pooling) & Chấm 
+điểm Tín dụng Xanh: ReLoop tổng hợp lượng phát thải CO2e cắt giảm từ 
+hàng ngàn giao dịch nhỏ lẻ thành các gói tín chỉ Carbon lớn đạt chuẩn quốc 
+tế (Verra/Gold Standard) để bán sỉ và chia sẻ 50% lợi nhuận lại cho người 
+dùng, đồng thời cung cấp dữ liệu Green Score hỗ trợ doanh nghiệp tiếp cận 
+gói vay tín dụng xanh lãi suất ưu đãi từ ngân hàng. 
+CHƯƠNG 2. GIẢI PHÁP CÔNG NGHỆ VÀ TÍNH KHẢ THI CỦA DỰ 
+ÁN 
+2.1. Kiến trúc sản phẩm (MVP Web App & Mobile Interface) 
+Hệ thống ReLoop được xây dựng theo kiến trúc “1 Lõi Công nghệ – 3 Phân 
+hệ Chuyên biệt” (Plug-and-Play), giúp tối ưu chi phí phát tri ển và dễ dàng mở 
+rộng sang các nhóm chất thải mới: 
+• Phân hệ 1 – Cổng đăng bán & Đ ịnh giá thông minh (Smart Listing & 
+Auto-Pricing): Chia làm ba lu ồng nhập liệu chuyên biệt: (i) Luồng Xây 
+dựng cho phép chọn loại vật liệu (bê tông, gạch, thép) và quay video AI đo 
+khối lượng; (ii) Luồng Pin xe điện cho phép nhập mã pin/thông số BMS để 
+ước tính độ chai SoH và phân luồng tái sử dụng (Second-life) hay nghiền tái 
+chế; (iii) Luồng Nông nghiệp cho phép khai báo loại phụ phẩm, độ ẩm và vị 
+trí tập kết. 
+• Phân hệ 2 – Bản đồ điều phối Logistics ngư ợc (Reverse Logistics 
+Matching): Kết nối điểm phát thải với đội xe tải/xe ben và nhà máy tái chế 
+đạt chuẩn trong bán kính 20 –30 km. Thu ật toán ghép chuy ến (Milk -run 
+Routing) tự động gom nhiều điểm phát thải nhỏ trên cùng một cung đường để 
+tối đa hóa tải trọng xe, giảm tỷ lệ xe chạy rỗng. 
+
+=== PAGE 8 ===
+• Phân hệ 3 – Trung tâm Chứng từ Điện tử & Kế toán Xanh (E-Manifest 
+& Green Ledger): Ngay khi tài xế và đại diện điểm phát thải quét mã QR 
+xác nhận giao nhận tại hiện trường, hệ thống tự động khởi tạo đồng bộ Biên 
+bản bàn giao ch ất thải điện tử, Hóa đơn VAT và Báo cáo quy đ ổi lượng 
+CO2e cắt giảm theo hệ số phát thải chuẩn của IPCC và Bộ TN&MT. 
+• Phân hệ 4 – Bảng điều khiển Quản trị ESG & Ví Tín dụng Xanh: Hiển 
+thị trực quan tổng dòng tiền thu hồi từ phế thải, chi phí xử lý tiết kiệm được, 
+tỷ lệ tái chế theo tháng và cho phép xuất báo cáo ESG chuẩn hóa chỉ với một 
+thao tác. 
+2.2. Tính khả thi về vận hành và pháp lý (Mô hình Asset-Light) 
+Để đảm bảo tính khả thi cao và loại bỏ rủi ro pháp lý liên quan đ ến vận 
+chuyển, xử lý chất thải nguy hại (đặc biệt là pin xe điện), ReLoop lựa chọn mô 
+hình kinh doanh tinh gọn không sở hữu tài sản vật lý (Asset-Light Marketplace): 
+• Tuân thủ pháp lý tuyệt đối: ReLoop đóng vai trò là n ền tảng công nghệ 
+trung gian điều phối và chuẩn hóa dữ liệu, không trực tiếp vận chuyển hay 
+lưu kho chất thải. Mọi đơn hàng trên sàn chỉ được khớp lệnh với các đơn vị 
+vận tải và nhà máy tái ch ế đã được Bộ hoặc Sở Tài nguyên và Môi trường 
+cấp giấy phép hành nghề hợp lệ (hệ thống tự động kiểm tra và cảnh báo hiệu 
+lực giấy phép của đối tác định kỳ). 
+• Tối ưu vốn đầu tư ban đầu (CapEx thấp): Dự án không tốn chi phí mua 
+sắm xe tải hay thuê bãi tập kết, mà khai thác trực tiếp công suất nhàn rỗi của 
+các hợp tác xã vận tải địa phương và nhu cầu nguyên liệu đầu vào của các 
+nhà máy tái chế hiện hữu. 
+2.3. Bốn lớp “Rào cản gia nhập” (Economic Moat) bảo vệ lợi thế cạnh tranh 
+Trong mô hình sàn giao d ịch B2B, rủi ro lớn nhất là bị đối thủ sao chép 
+giao diện hoặc bị người mua và người bán giao dịch trực tiếp ngoài nền tảng sau 
+lần đầu tiên. ReLoop giải quyết triệt để vấn đề này thông qua bốn lớp khóa chặt 
+(Lock-in): 
+• 1. Khóa ch ặt quy trình K ế toán – Thuế (Compliance & Accounting 
+Lock-in): Doanh nghiệp B2B bắt buộc phải thực hiện giao dịch qua nền tảng 
+ReLoop mới nhận được hóa đơn đi ện tử VAT hợp lệ và bộ chứng từ E-
+
+=== PAGE 9 ===
+Manifest đạt chuẩn để quyết toán thuế và nghiệm thu công trình. Khi bộ phận 
+kế toán của khách hàng đã tích hợp hệ thống của ReLoop vào quy trình làm 
+việc, chi phí chuyển đổi sang nền tảng khác là rất lớn. 
+• 2. Hiệu ứng mạng lưới hai chiều cục bộ (Hyper-local Network Effects): 
+Do chi phí vận chuyển phế thải phụ thuộc chặt chẽ vào khoảng cách địa lý, 
+khi ReLoop chiếm lĩnh mật độ điểm phát thải dày đặc tại từng cụm khu vực 
+bán kính 20–30 km, thuật toán ghép chuyến sẽ kéo giá cước vận tải xuống 
+thấp hơn thị trường 20%–25%, tạo rào cản chi phí khi ến đối thủ mới khó 
+cạnh tranh. 
+• 3. Độc quyền dữ liệu định giá thực tế (Proprietary Data Moat): Dữ liệu 
+lịch sử tích lũy từ hàng ngàn giao dịch về tỷ lệ tạp chất thực tế của từng loại 
+công trình, độ chai pin SoH theo dòng xe và đ ộ ẩm phụ phẩm nông nghiệp 
+theo mùa giúp thuật toán định giá của ReLoop ngày càng chính xác, gi ảm 
+thiểu rủi ro chất lượng cho nhà máy tái chế. 
+• 4. Hệ sinh thái bao tiêu đầu ra và Tài chính xanh: Các hợp đồng nguyên 
+tắc bao tiêu đầu ra ký kết với nhà máy gạch không nung, nhà máy tái chế pin 
+cùng cơ chế kết nối API chấm điểm Green Score trực tiếp với ngân hàng tạo 
+thành hệ sinh thái khép kín mà các đơn v ị thu mua nhỏ lẻ không thể cung 
+cấp. 
+CHƯƠNG 3. THỊ TRƯỜNG MỤC TIÊU VÀ KẾ HOẠCH MỞ RỘNG 
+3.1. Quy mô thị trường (TAM – SAM – SOM) 
+• TAM (Tổng thị trường tiềm năng toàn quốc): Ngành quản lý chất thải rắn 
+công nghiệp, xây dựng, pin phương tiện điện và sinh khối nông nghiệp tại 
+Việt Nam ước tính đạt quy mô trên 3,5 t ỷ USD/năm và tăng trưởng trung 
+bình 12%–15%/năm. 
+• SAM (Thị trường khả dụng khu vực Hà Nội & Vùng kinh tế trọng điểm 
+Bắc Bộ): Ước tính đạt 650 triệu USD/năm với hơn 4.000 dự án xây dựng dân 
+dụng và hạ tầng đang triển khai, hàng ngàn đi ểm dịch vụ xe điện và vùng 
+nguyên liệu nông nghiệp rộng lớn. 
+• SOM (Thị trường mục tiêu giai đoạn 18 tháng đầu): Chiếm lĩnh 1,5% thị 
+phần khu vực Hà Nội và các tỉnh lân cận, tương đương tổng giá trị giao dịch 
+qua sàn (GMV) đạt khoảng 9,5 triệu USD (khoảng 240 tỷ VNĐ). 
+
+=== PAGE 10 ===
+3.2. Phân khúc khách hàng mục tiêu 
+• Bên cung (Đơn vị phát thải): Các nhà thầu xây dựng vừa và nhỏ (SMEs), 
+ban quản lý dự án khu đô th ị; hệ thống xưởng dịch vụ, trạm bảo hành xe 
+điện; hợp tác xã nông nghiệp và cơ sở chế biến nông sản. 
+• Bên cầu (Đơn vị tái chế & Tái sử dụng): Nhà máy sản xuất gạch không 
+nung, vật liệu san lấp công trình; đơn v ị tái chế pin lithium/ắc quy chì và 
+startup sản xuất trạm lưu trữ điện mặt trời; nhà máy sản xuất viên nén sinh 
+khối (Biomass) và phân bón hữu cơ. 
+3.3. Lộ trình triển khai “Mũi nhọn trước, Hệ sinh thái sau” (18 tháng) 
+Thay vì dàn trải nguồn lực cho cả ba mảng ngay từ ngày đầu, ReLoop áp 
+dụng chiến lược đánh chiếm thị trường ngách (Beachhead Strategy) theo ba giai 
+đoạn rõ ràng: 
+• Giai đoạn 1 (Tháng 1 – Tháng 6): Tập trung mũi nh ọn Phế thải xây 
+dựng tại Hà Nội. Dồn 100% nguồn lực vận hành cho m ảng phế thải xây 
+dựng tại địa bàn Hà Nội – nơi có mật độ công trình cao và quy định nghiệm 
+thu chứng từ môi trường chặt chẽ. Mục tiêu kết nối 150 nhà thầu xây dựng, 
+30 đội xe ben đối tác và 10 nhà máy nghiền tái chế vật liệu. 
+• Giai đoạn 2 (Tháng 7 – Tháng 12): Kích ho ạt phân hệ Pin/Ắc quy xe 
+điện & Ví Tín dụng Xanh. Triển khai công cụ định giá sức khỏe pin (SoH) 
+và điều phối thu gom pin xe điện cũ tại Hà Nội, Bắc Ninh; chính thức ra mắt 
+tính năng xuất báo cáo ESG tự động và kết nối API chấm điểm Green Score 
+với ngân hàng đối tác. 
+• Giai đoạn 3 (Tháng 13 – Tháng 18): Mở rộng sang Ph ụ phẩm nông 
+nghiệp & Các tỉnh công nghiệp Bắc Bộ. Kích hoạt phân hệ giao dịch sinh 
+khối nông nghiệp tại Phú Thọ, Hưng Yên, Hải Dương; thực hiện đợt đóng 
+gói và thương mại hóa tín chỉ Carbon cộng gộp đầu tiên. 
+CHƯƠNG 4. NGUỒN LỰC THỰC HIỆN VÀ MÔ HÌNH TÀI CHÍNH 
+4.1. Tổ chức đội ngũ nhân sự và đối tác chiến lược 
+Đội ngũ sáng lập ReLoop Vietnam quy tụ các sinh viên từ Trường Kinh tế 
+– Đại học Công nghiệp Hà Nội với thế mạnh chuyên môn bổ trợ lẫn nhau: 
+
+=== PAGE 11 ===
+• Trưởng nhóm: Chuyên sâu về Kế toán – Kiểm toán và phân tích tài chính 
+doanh nghiệp, chịu trách nhiệm thiết kế chuẩn hóa chứng từ E-Manifest tích 
+hợp kế toán, xây dựng mô hình đ ịnh giá, quản trị dòng tiền và điều hành 
+chung. 
+• Phụ trách ESG & Pháp lý môi trư ờng: Nghiên cứu sâu về Luật Bảo vệ 
+Môi trường, cơ chế EPR, tiêu chuẩn kiểm kê khí nhà kính và phát triển quan 
+hệ với các tổ chức tín dụng xanh. 
+• Phụ trách Vận hành & Đối tác B2B: Trực tiếp khảo sát thực địa, thiết lập 
+mạng lưới nhà thầu xây dựng, đội xe vận tải và nhà máy tái chế đối tác. 
+Ngoài ra, dự án nhận được sự cố vấn chuyên môn từ các giảng viên Trường 
+Kinh tế – Đại học Công nghiệp Hà Nội, đồng thời hợp tác kỹ thuật với đội ngũ 
+kỹ sư công nghệ thông tin để hoàn thiện thuật toán AI Computer Vision và tích 
+hợp cổng thanh toán, hóa đơn điện tử. 
+4.2. Mô hình doanh thu đa tầng (4 dòng tiền bền vững) 
+• 1. Hoa hồng giao dịch trên sàn (Transaction Fee – 40% cơ cấu doanh 
+thu): Thu mức phí 6% – 8% trên tổng giá trị mỗi đơn hàng thu gom/mua bán 
+phế thải khớp lệnh thành công qua nền tảng. 
+• 2. Phí thuê bao phần mềm quản trị chứng từ & ESG (SaaS Subscription 
+– 30% cơ c ấu doanh thu): Thu phí đ ịnh k ỳ từ 1.500.000đ – 
+3.000.000đ/tháng đối với các doanh nghiệp B2B sử dụng gói tự động xuất 
+chứng từ E-Manifest, hóa đơn VAT tích hợp phần mềm kế toán và báo cáo 
+kiểm kê khí nhà kính định kỳ. 
+• 3. Phí tối ưu vận tải ngược (Logistics Optimization Fee – 15% cơ cấu 
+doanh thu): Hưởng 5% chênh l ệch từ phần chi phí v ận chuyển tiết kiệm 
+được thông qua thuật toán ghép chuyến Milk-run. 
+• 4. Doanh thu Tín ch ỉ Carbon & Hoa h ồng giới thiệu Tín dụng Xanh 
+(15% cơ cấu doanh thu): Giữ lại 50% giá trị thương mại hóa từ gói tín chỉ 
+Carbon cộng gộp và nhận phí giới thiệu hồ sơ vay vốn xanh giải ngân thành 
+công từ ngân hàng đối tác. 
+4.3. Dự phóng tài chính 3 năm đầu hoạt động 
+Chỉ tiêu tài chính (Đơn vị: Năm 1 Năm 2 Năm 3 
+
+=== PAGE 12 ===
+Triệu VNĐ) (Pilot & Hà 
+Nội) 
+(3 mảng & 
+Vùng ven) 
+(Toàn miền Bắc) 
+Số lượng khách hàng B2B hoạt 
+động (Doanh nghiệp) 200 850 2.500 
+Tổng giá trị giao dịch qua sàn 
+(GMV) 18.000 85.000 260.000 
+Tổng doanh thu thuần của 
+ReLoop 2.160 10.200 31.200 
+Chi phí vận hành, công nghệ & 
+nhân sự 2.450 7.800 19.500 
+Lợi nhuận trước thuế 
+(EBITDA) -290 +2.400 +11.700 
+Điểm hòa vốn (Break-even 
+Point) 
+Dự kiến đạt điểm hòa vốn vào Tháng thứ 14 của dự án 
+ 
+CHƯƠNG 5. HIỆU QUẢ KINH TẾ - XÃ HỘI VÀ TÍNH BỀN VỮNG 
+Dự án ReLoop Vietnam hướng tới mục tiêu kép là tạo ra giá trị kinh tế trực 
+tiếp cho doanh nghiệp đồng thời giải quyết các bài toán môi trường cấp bách tại 
+đô thị và nông thôn, đóng góp thiết thực vào các Mục tiêu Phát triển Bền vững 
+của Liên Hợp Quốc (SDGs 8, 9, 11, 12 và 13): 
+• 1. Hiệu quả Kinh tế: Giúp các nhà thầu xây dựng và doanh nghiệp phát thải 
+giảm từ 15% – 25% chi phí xử lý chất thải, đồng thời thu hồi thêm dòng tiền 
+hoàn lại từ việc bán phế thải phân loại sạch hoặc đổi lấy vật liệu tái chế chiết 
+khấu. Đối với các nhà máy tái chế, nền tảng giúp tiết kiệm 20% chi phí thu 
+mua nguyên liệu đầu vào nhờ nguồn cung tập trung và cước vận tải tối ưu. 
+Đồng thời, hồ sơ Green Score tạo đòn bẩy giúp các doanh nghiệp nhỏ và vừa 
+(SMEs) tiếp cận nguồn vốn tín dụng xanh với lãi suất ưu đãi hơn 1% – 
+2%/năm. 
+• 2. Hiệu quả Môi trường & Xã hội (Chỉ số tác động dự kiến trong Năm 
+1): Thu gom và điều phối tái chế thành công tối thiểu 18.000 tấn phế thải đặc 
+thù thay vì chôn l ấp, đổ trộm hoặc đốt bỏ ngoài môi trường; cắt giảm trực 
+tiếp khoảng 5.400 tấn khí thải nhà kính quy đổi (CO2e) trong năm đầu tiên 
+
+=== PAGE 13 ===
+vận hành. Về mặt xã hội, nền tảng giúp chuẩn hóa quy trình làm vi ệc, đảm 
+bảo an toàn lao động và nâng cao thu nhập ổn định hơn 25% cho lực lượng 
+lao động thu gom và tài x ế vận tải địa phương thông qua vi ệc kết nối đơn 
+hàng liên tục trên hệ thống số. 
+• 3. Tính bền vững và khả năng nhân rộng: Với kiến trúc công nghệ linh 
+hoạt theo mô hình Plug-and-Play và phương thức vận hành tinh gọn không sở 
+hữu tài sản vật lý (Asset -Light), sau khi chuẩn hóa quy trình tại Hà Nội và 
+vùng kinh tế trọng điểm Bắc Bộ, ReLoop Vietnam có kh ả năng nhân bản 
+nhanh chóng sang TP. Hồ Chí Minh, khu vực Đông Nam Bộ và Đồng bằng 
+sông Cửu Long – những địa bàn có trữ lượng phụ phẩm nông nghiệp, rác thải 
+xây dựng và phương tiện điện cực lớn – mà không đòi hỏi chi phí đầu tư hạ 
+tầng kho bãi cồng kềnh. 
+ 
+TRƯỞNG NHÓM DỰ THI 
+(Ký và ghi rõ họ tên) 
+Hoàng Liên Hương 

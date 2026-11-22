@@ -1,0 +1,79 @@
+.eco3d-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 390px;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 48%, #d1e7b8, #e9f0df 64%, #f1f5eb);
+}
+
+.eco3d-kicker {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #516a42;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.eco3d-tilt { width: min(100%, 450px); margin: auto; }
+.eco3d-tilt > .tilt-surface-plane { display: block; }
+.eco3d-world { position: relative; width: 100%; height: 370px; transform-style: preserve-3d; }
+.eco3d-ground-shadow { position: absolute; left: 14%; right: 14%; top: 65%; height: 45px; border-radius: 50%; background: #244d2633; filter: blur(14px); transform: translateZ(-20px); }
+.eco3d-deck { position: absolute; left: 50%; top: 56%; width: min(78%, 330px); aspect-ratio: 1; transform: translate(-50%, -50%) rotateX(58deg) rotateZ(-22deg); transform-style: preserve-3d; }
+.eco3d-base, .eco3d-deck-top { position: absolute; inset: 0; border-radius: 50%; }
+.eco3d-base { background: #66884d; border: 1px solid #739359; transform: translateZ(-12px); box-shadow: 0 2px #587640, 0 5px #587640, 0 8px #66884d; }
+.eco3d-deck-top { background: linear-gradient(140deg, #eff8e7, #d1e3bf 65%, #b8d49b); border: 1px solid #abc591; transform: translateZ(0); box-shadow: inset 0 0 0 6px #eff8e766; }
+.eco3d-ring { position: absolute; border-radius: 50%; border: 1px solid #8cae70; transform: translateZ(2px); }
+.ring-outer { inset: 8%; border-style: dashed; }
+.ring-inner { inset: 27%; border-color: #9bb78488; }
+.eco3d-track { position: absolute; top: 50%; left: 50%; width: 34%; height: 1px; transform-origin: 0 0; background: linear-gradient(90deg, #5e9647, #86b16866); transform: translateZ(3px); }
+.track-one { transform: translateZ(3px) rotate(-90deg); }
+.track-two { transform: translateZ(3px) rotate(145deg); }
+.track-three { transform: translateZ(3px) rotate(35deg); }
+.eco3d-core-anchor { position: absolute; top: 50%; left: 50%; width: 96px; height: 96px; transform: translate(-50%, -50%) translateZ(44px) rotateZ(22deg) rotateX(-58deg); transform-style: preserve-3d; }
+.eco3d-core { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 50%; overflow: hidden; background: radial-gradient(circle at 32% 22%, #4f7c3a, #203e25 52%, #122b18); border: 1px solid #85a965; box-shadow: inset -8px -8px 18px #06160d66, inset 3px 3px 10px #b9e18d22, 0 16px 20px #254c2630; }
+.eco3d-core strong { position: relative; color: #91f36a; font-size: 23px; font-weight: 750; letter-spacing: -.8px; }
+.eco3d-core > span:last-child { position: relative; color: #d5e8c8; font-size: 8px; letter-spacing: 2.8px; margin-top: 4px; }
+.eco3d-core-grid { position: absolute; inset: 12px -12px; border: 1px solid #d1edbb18; border-radius: 50%; transform: rotate(-28deg); }
+.eco3d-core-grid::before, .eco3d-core-grid::after { content: ''; position: absolute; border: 1px solid #d1edbb18; border-radius: 50%; }
+.eco3d-core-grid::before { inset: -12px 30px; }
+.eco3d-core-grid::after { inset: 22px -8px; }
+.eco3d-anchor { position: absolute; width: 86px; height: 100px; transform: translate(-50%, -50%) translateZ(24px); transform-style: preserve-3d; transition: transform 300ms ease; }
+.eco3d-source { top: 10%; left: 50%; }
+.eco3d-transport { top: 74%; left: 13%; }
+.eco3d-recycle { top: 74%; left: 87%; }
+.eco3d-anchor.is-selected { transform: translate(-50%, -50%) translateZ(42px); }
+.eco3d-node-shadow { position: absolute; top: 50%; left: 50%; width: 54px; height: 54px; border-radius: 50%; background: #2d542329; transform: translate(-50%, -10%) translateZ(-23px); filter: blur(5px); }
+.eco3d-node { display: flex; flex-direction: column; align-items: center; width: 86px; transform: rotateZ(22deg) rotateX(-58deg); transform-style: preserve-3d; }
+.eco3d-node-tile { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; color: #3d6332; background: linear-gradient(135deg, #ffffff, #e8f1df); border: 1px solid #b4c6a3; box-shadow: 0 3px #9fb78c, 0 5px #adc29c, 0 10px 18px #264b2826; transition: background 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease; }
+.eco3d-node-tile svg { width: 30px; height: 30px; }
+.eco3d-node > strong { display: block; white-space: nowrap; text-align: center; color: #344e2d; font-size: 13px; font-weight: 600; margin-top: 12px; padding: 3px 9px; border-radius: 999px; background: #f3f8eccf; border: 1px solid #afc39977; }
+.eco3d-source .eco3d-node > strong { position: absolute; bottom: calc(100% + 10px); margin: 0; }
+.is-selected .eco3d-node-tile { color: #233f20; background: linear-gradient(135deg, #a0f37b, #6bdc47); border-color: #70b74c; box-shadow: 0 3px #4b9b32, 0 5px #60ae43, 0 10px 24px #4c8e4330; }
+.eco3d-caption { position: absolute; bottom: 28px; text-align: center; color: #596b4f; font-size: 12px; letter-spacing: .2px; }
+
+@media (max-width: 767px) {
+  .eco3d-scene { min-height: 340px; }
+  .eco3d-world { height: 330px; }
+  .eco3d-kicker { top: 24px; font-size: 9px; }
+  .eco3d-caption { bottom: 22px; }
+  .eco3d-deck { width: min(78%, 300px); }
+  .eco3d-core-anchor, .eco3d-core { width: 86px; height: 86px; }
+  .eco3d-core strong { font-size: 21px; }
+  .eco3d-node-tile { width: 48px; height: 48px; border-radius: 12px; }
+  .eco3d-node-tile svg { width: 27px; height: 27px; }
+  .eco3d-node > strong { font-size: 12px; padding-inline: 7px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eco3d-anchor { transition: none; }
+  .eco3d-anchor.is-selected { transform: translate(-50%, -50%) translateZ(24px); }
+}
