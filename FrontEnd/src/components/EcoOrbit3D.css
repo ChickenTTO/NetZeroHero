@@ -59,6 +59,18 @@
 .eco3d-deck { z-index: 1; }
 .eco3d-core-anchor { z-index: 2; }
 .eco3d-anchor { z-index: 3; }
+.eco3d-deck { top: 60%; width: min(88%, 370px); transform: translate(-50%, -50%) rotateX(48deg) rotateZ(-24deg); }
+.eco3d-caption { bottom: 14px; }
+.eco3d-core-anchor { top: 61%; }
+.eco3d-anchor { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; border-radius: 16px; cursor: pointer; }
+.eco3d-tilt > .tilt-surface-plane { transform-style: flat; }
+.eco3d-deck, .eco3d-core-anchor, .eco3d-ground-shadow { pointer-events: none; }
+.eco3d-source { top: 35%; left: 50%; }
+.eco3d-transport { top: 73%; left: 22%; }
+.eco3d-recycle { top: 73%; left: 78%; }
+.eco3d-anchor:hover .eco3d-node-tile { border-color: #688e51; box-shadow: inset 0 1px #fff, 0 3px #9eb98a, 0 10px 22px #294f2838; }
+.eco3d-anchor:focus-visible { outline-offset: 5px; }
+.eco3d-node-stem { display: none; }
 @media (max-width: 1023px) and (min-width: 768px) {
   .eco3d-node > strong { font-size: 12px; padding-inline: 7px; }
   .eco3d-core-anchor, .eco3d-core { width: 86px; height: 86px; }
@@ -68,15 +80,16 @@
   .eco3d-scene { min-height: 360px; }
   .eco3d-world { height: 340px; }
   .eco3d-kicker { top: 24px; font-size: 9px; }
-  .eco3d-caption { bottom: 22px; }
-  .eco3d-deck { width: min(80%, 310px); }
+  .eco3d-caption { bottom: 14px; }
+  .eco3d-deck { width: min(92%, 330px); }
   .eco3d-core-anchor, .eco3d-core { width: 86px; height: 86px; }
   .eco3d-core strong { font-size: 21px; }
   .eco3d-node-tile { width: 48px; height: 48px; border-radius: 13px; }
   .eco3d-node-tile svg { width: 26px; height: 26px; }
   .eco3d-node > strong { font-size: 12px; padding-inline: 7px; }
-  .eco3d-source { top: 24%; }
-  .eco3d-transport, .eco3d-recycle { top: 68%; }
+  .eco3d-source { top: 37%; }
+  .eco3d-core-anchor { top: 62%; }
+  .eco3d-transport, .eco3d-recycle { top: 75%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .eco3d-anchor, .eco3d-contact, .eco3d-node-tile { transition: none; }
