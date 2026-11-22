@@ -33,8 +33,7 @@
   color-scheme: light;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 120px; }
-@media (max-width: 767px) { html { scroll-padding-top: 104px; } }
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
 body { margin: 0; min-width: 0; }
 button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
