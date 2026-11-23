@@ -1,4 +1,5 @@
 import TiltSurface from './TiltSurface'
+import BrandLogo from './BrandLogo'
 import './EcoOrbit3D.css'
 
 function MaterialIcon({ type }) {
@@ -33,7 +34,7 @@ export default function EcoOrbit3D({ selected = 0, onSelect }) {
           <span className="eco3d-dock" />
           {nodes.map((node, index) => <span className={`eco3d-contact contact-${node.position}${selected === index ? ' is-selected' : ''}`} key={node.name} />)}
         </div>
-        <div className="eco3d-core-anchor"><div className="eco3d-core"><span className="eco3d-core-grid" /><span className="eco3d-core-reflection" /><strong>ReLoop</strong><span className="eco3d-core-country">VIETNAM</span></div></div>
+        <div className="eco3d-core-anchor"><div className="eco3d-core"><span className="eco3d-core-grid" /><span className="eco3d-core-reflection" /><BrandLogo /><strong>GOM</strong></div></div>
         {nodes.map((node, index) => <button type="button" className={`eco3d-anchor eco3d-${node.position}${selected === index ? ' is-selected' : ''}`} key={node.name} aria-label={node.name} aria-pressed={selected === index} aria-controls="audience-description" onClick={() => onSelect?.(index)}>
           <span className="eco3d-node-stem" />
           <span className="eco3d-node"><span className="eco3d-node-tile"><MaterialIcon type={node.icon} /></span><strong>{node.name}</strong></span>

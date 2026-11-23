@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import AuthDialog from './components/AuthDialog'
+import BackToTop from './components/BackToTop'
+import BrandLogo from './components/BrandLogo'
 import Globe3D from './components/Globe3D'
 import TiltSurface from './components/TiltSurface'
+import Workspace from './workspace/Workspace'
+import { getSession, signOut, rolePath } from './workspace/mockData'
 import { Reveal, MarketSection, TechnologySection, EcosystemSection, RoadmapSection } from './components/HomeSections'
 
 const currentYear = new Date().getFullYear()
@@ -24,7 +28,7 @@ function Icon({ name = 'leaf' }) {
 }
 
 function Brand() {
-  return <a className="brand" href="#home" aria-label="NetZeroHeros — Trang chủ"><Icon />NetZero<span>Heros</span></a>
+  return <a className="brand" href="#home" aria-label="NetZeroHeroes — Trang chủ"><BrandLogo />NetZero<span>Heroes</span></a>
 }
 
 function Planet() {
@@ -61,16 +65,45 @@ const actions = [
   { icon: 'leaf', tag: 'PHỤ PHẨM NÔNG NGHIỆP', title: 'Từ phụ phẩm đến nguồn nguyên liệu.', description: 'Kết nối rơm rạ, trấu và vỏ nông sản với nhà máy viên nén sinh khối, cơ sở sản xuất phân hữu cơ; hướng đến tận dụng nguồn phụ phẩm sau thu hoạch.', suggestion: 'Lộ trình mở rộng: giai đoạn 3', className: 'living' },
 ]
 const questions = [
-  ['ReLoop Vietnam dành cho những ai?', 'Dự án của nhóm Net Zero Heroes hướng đến kết nối các nhà thầu xây dựng, cơ sở dịch vụ xe điện, hợp tác xã nông nghiệp với đội xe vận tải và các nhà máy tái chế, tái sử dụng. Nền tảng đóng vai trò trung gian công nghệ, không trực tiếp vận chuyển hay lưu kho chất thải.'],
+  ['GOM dành cho những ai?', 'Dự án của nhóm NetZeroHeroes hướng đến kết nối các nhà thầu xây dựng, cơ sở dịch vụ xe điện, hợp tác xã nông nghiệp với đội xe vận tải và các nhà máy tái chế, tái sử dụng. Nền tảng đóng vai trò trung gian công nghệ, không trực tiếp vận chuyển hay lưu kho chất thải.'],
   ['AI hỗ trợ định giá phế thải như thế nào?', 'Với phế thải xây dựng, hướng tiếp cận là sử dụng video quay tại điểm tập kết để ước tính thể tích và nhận diện tạp chất. Với pin, dữ liệu mã pin và hệ thống quản lý pin (BMS) hỗ trợ đánh giá sức khỏe pin (SoH). Với phụ phẩm nông nghiệp, dữ liệu đầu vào gồm loại phụ phẩm, độ ẩm và vị trí tập kết.'],
-  ['Chứng từ điện tử mang lại giá trị gì cho doanh nghiệp?', 'ReLoop hướng đến số hóa biên bản bàn giao chất thải (E-Manifest), kết nối hóa đơn điện tử và sổ kế toán xanh. Dữ liệu giao nhận được xác nhận bằng mã QR là cơ sở để theo dõi dòng vật liệu và hỗ trợ lập báo cáo ESG của doanh nghiệp.'],
+  ['Chứng từ điện tử mang lại giá trị gì cho doanh nghiệp?', 'GOM hướng đến số hóa biên bản bàn giao chất thải (E-Manifest), kết nối hóa đơn điện tử và sổ kế toán xanh. Dữ liệu giao nhận được xác nhận bằng mã QR là cơ sở để theo dõi dòng vật liệu và hỗ trợ lập báo cáo ESG của doanh nghiệp.'],
   ['Dự án định hướng tín chỉ carbon và tài chính xanh ra sao?', 'Dự án hướng đến tổng hợp dữ liệu tái chế để ước tính lượng giảm phát thải CO₂e, xây dựng hồ sơ Green Score và hỗ trợ tiếp cận tài chính xanh. Cộng gộp tín chỉ carbon là định hướng phát triển; lượng giảm phát thải cần được xác minh theo phương pháp và tiêu chuẩn áp dụng trước khi có thể trở thành tín chỉ.'],
 ]
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [authMode, setAuthMode] = useState(null)
+  const [account, setAccount] = useState(getSession)
+  const [hash, setHash] = useState(() => window.location.hash)
   const menuButton = useRef(null)
+  const workspaceMatch = hash.match(/^#\/(thu-mua|ben-ban)(?:\/([^/]+))?\/?$/)
+  const requestedRole = workspaceMatch?.[1]
+  const requestedView = workspaceMatch?.[2] || 'overview'
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', updateHash)
+    return () => window.removeEventListener('hashchange', updateHash)
+  }, [])
+  useEffect(() => {
+    if (requestedRole && account && requestedRole !== rolePath(account.role)) {
+      window.location.replace(`#/${rolePath(account.role)}/overview`)
+    }
+    if (!requestedRole) document.title = 'GOM — Kết nối phế thải, kiến tạo giá trị tuần hoàn'
+  }, [requestedRole, account])
+  function loggedIn(user) {
+    setAccount(user)
+    setAuthMode(null)
+    setMenuOpen(false)
+    window.location.hash = `/${rolePath(user.role)}/overview`
+    window.scrollTo(0, 0)
+  }
+  function logout() {
+    signOut()
+    setAccount(null)
+    window.location.hash = 'home'
+    setAuthMode(null)
+  }
   useEffect(() => {
     const onEscape = (event) => {
       if (event.key === 'Escape' && menuOpen) {
@@ -81,25 +114,28 @@ function App() {
     document.addEventListener('keydown', onEscape)
     return () => document.removeEventListener('keydown', onEscape)
   }, [menuOpen])
+  if (account && requestedRole) return <Workspace account={account} view={requestedView} onLogout={logout} />
+  const visibleAuthMode = authMode || (requestedRole && !account ? 'login' : null)
   return <>
-    {authMode && <AuthDialog key={authMode} mode={authMode} onClose={() => setAuthMode(null)} onModeChange={setAuthMode} />}
+    {visibleAuthMode && <AuthDialog key={visibleAuthMode} mode={visibleAuthMode} onClose={() => { setAuthMode(null); if (requestedRole) window.location.hash = 'home' }} onModeChange={setAuthMode} onSuccess={loggedIn} />}
+    <BackToTop />
     <a className="skip-link" href="#main">Đến nội dung chính</a>
     <div className="hero-shell" id="home">
-      <header className="site-header container"><Brand /><button ref={menuButton} className="menu-toggle" aria-label={menuOpen ? 'Đóng menu' : 'Mở menu'} aria-expanded={menuOpen} aria-controls="navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? 'close' : 'menu'} /></button><nav id="navigation" className={`navigation ${menuOpen ? 'is-open' : ''}`} aria-label="Điều hướng chính" onClick={(event) => { if (event.target.closest('a')) setMenuOpen(false) }}><a href="#home" aria-current="page">Trang chủ</a><a href="#cach-hoat-dong">Cách hoạt động</a><a href="#hanh-dong">Lĩnh vực</a><a href="#cau-hoi">Câu hỏi thường gặp</a><div className="nav-auth"><button type="button" className="button button-login" onClick={() => setAuthMode('login')}>Đăng nhập</button><button type="button" className="button button-primary nav-cta" onClick={() => setAuthMode('signup')}>Đăng ký</button></div></nav></header>
+      <header className="site-header container"><Brand /><button ref={menuButton} className="menu-toggle" aria-label={menuOpen ? 'Đóng menu' : 'Mở menu'} aria-expanded={menuOpen} aria-controls="navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? 'close' : 'menu'} /></button><nav id="navigation" className={`navigation ${menuOpen ? 'is-open' : ''}`} aria-label="Điều hướng chính" onClick={(event) => { if (event.target.closest('a')) setMenuOpen(false) }}><a href="#home" aria-current="page">Trang chủ</a><a href="#cach-hoat-dong">Cách hoạt động</a><a href="#hanh-dong">Lĩnh vực</a><a href="#cau-hoi">Câu hỏi thường gặp</a><div className="nav-auth">{account ? <a className="button button-primary nav-cta" href={`#/${rolePath(account.role)}/overview`}>Không gian làm việc</a> : <><button type="button" className="button button-login" onClick={() => setAuthMode('login')}>Đăng nhập</button><button type="button" className="button button-primary nav-cta" onClick={() => setAuthMode('signup')}>Đăng ký</button></>}</div></nav></header>
       <main id="main">
-        <section className="hero container" aria-labelledby="hero-title"><div className="hero-copy"><span className="eyebrow hero-eyebrow"><span />KINH TẾ TUẦN HOÀN CHO DOANH NGHIỆP</span><h1 id="hero-title">Kết nối phế thải,<br />kiến tạo giá trị<br /><span>tuần hoàn.</span></h1><p>ReLoop Vietnam — dự án của nhóm Net Zero Heroes, hướng đến kết nối nguồn phế thải, vận tải và tái chế trên một nền tảng B2B. Từ định giá đến chứng từ, khơi mở giá trị cho doanh nghiệp.</p><div className="hero-buttons"><a className="button button-primary" href="#hanh-dong">Khám phá giải pháp</a><a className="text-link" href="#cach-hoat-dong"><span className="play-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5a1 1 0 0 1 1.5-.86l10 6.5a1 1 0 0 1 0 1.72l-10 6.5A1 1 0 0 1 8 18.5Z" /></svg></span>Cách hoạt động</a></div><div className="hero-footnote"><Icon name="heart" /><span>Kết nối doanh nghiệp. Tái tạo tài nguyên.</span></div></div><Planet /></section>
+        <section className="hero container" aria-labelledby="hero-title"><div className="hero-copy"><span className="eyebrow hero-eyebrow"><span />DỰ ÁN CỦA NETZEROHEROES</span><h1 id="hero-title" tabIndex={-1}><span className="hero-project-name">GOM</span><span className="hero-project-tagline">Kết nối phế thải,<br />kiến tạo giá trị <em>tuần hoàn.</em></span></h1><p>GOM — dự án của nhóm NetZeroHeroes, hướng đến kết nối nguồn phế thải, vận tải và tái chế trên một nền tảng B2B. Từ định giá đến chứng từ, khơi mở giá trị cho doanh nghiệp.</p><div className="hero-buttons"><a className="button button-primary" href="#hanh-dong">Khám phá giải pháp</a><a className="text-link" href="#cach-hoat-dong"><span className="play-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5a1 1 0 0 1 1.5-.86l10 6.5a1 1 0 0 1 0 1.72l-10 6.5A1 1 0 0 1 8 18.5Z" /></svg></span>Cách hoạt động</a></div><div className="hero-footnote"><Icon name="heart" /><span>Kết nối doanh nghiệp. Tái tạo tài nguyên.</span></div></div><Planet /></section>
         <div className="values-strip"><div className="container"><span><Icon />Định giá minh bạch</span><span><Icon name="sun" />Tối ưu vận chuyển</span><span><Icon name="heart" />Số hóa chứng từ</span></div></div>
         <MarketSection />
-        <section className="how-section section" id="cach-hoat-dong" aria-labelledby="how-title"><div className="container"><div className="section-heading"><div><span className="eyebrow">GIẢI PHÁP RELOOP VIETNAM</span><h2 id="how-title">Từ điểm phát thải<br />đến vòng đời tài nguyên mới.</h2></div><p>Kết nối các mắt xích còn phân tán: nguồn thải, vận tải và tái chế, với dữ liệu xuyên suốt quy trình.</p></div><div className="steps-grid">{[['Khai báo & định giá', 'Ghi nhận loại vật liệu, khối lượng và vị trí tập kết. Ứng dụng AI hỗ trợ đánh giá chất lượng, hướng đến định giá minh bạch.'], ['Ghép chuyến & thu gom', 'Kết nối nguồn thải với đội xe và nhà máy phù hợp. Gom nhiều điểm trên cùng tuyến để tối ưu tải trọng, hạn chế xe chạy rỗng.'], ['Xác nhận & ghi nhận giá trị', 'Xác nhận giao nhận bằng QR, số hóa chứng từ E-Manifest và dữ liệu kế toán xanh, làm cơ sở theo dõi tái chế và báo cáo ESG.']].map(([title, text], index) => <article className="step" key={title}><span className="step-number">0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
-        <section className="actions-section section" id="hanh-dong" aria-labelledby="actions-title"><div className="container"><div className="section-heading"><div><span className="eyebrow">BA DÒNG PHẾ THẢI, MỘT HỆ SINH THÁI</span><h2 id="actions-title">Khơi mở giá trị từ phế thải đặc thù.</h2></div><span className="section-aside">Mũi nhọn trước, hệ sinh thái sau.</span></div><div className="actions-grid">{actions.map(action => <Reveal key={action.tag}><TiltSurface className="action-tilt" maxTilt={6}><article className={`action-card ${action.className}`}><div className="action-art"><Icon name={action.icon} /><span className="art-orbit" /><span className="art-spark">✳</span><span className="art-caption">RELOOP VIETNAM · CIRCULAR ECONOMY</span></div><div className="action-content"><span className="eyebrow">{action.tag}</span><h3>{action.title}</h3><p>{action.description}</p><div className="suggestion"><Icon name="check" /><span>{action.suggestion}</span></div></div></article></TiltSurface></Reveal>)}</div><p className="action-disclaimer">Định hướng trao đổi tuần hoàn: phế thải xây dựng đổi vật liệu tái chế, phụ phẩm nông nghiệp đổi phân bón hữu cơ.</p></div></section>
+        <section className="how-section section" id="cach-hoat-dong" aria-labelledby="how-title"><div className="container"><div className="section-heading"><div><span className="eyebrow">GIẢI PHÁP GOM</span><h2 id="how-title">Từ điểm phát thải<br />đến vòng đời tài nguyên mới.</h2></div><p>Kết nối các mắt xích còn phân tán: nguồn thải, vận tải và tái chế, với dữ liệu xuyên suốt quy trình.</p></div><div className="steps-grid">{[['Khai báo & định giá', 'Ghi nhận loại vật liệu, khối lượng và vị trí tập kết. Ứng dụng AI hỗ trợ đánh giá chất lượng, hướng đến định giá minh bạch.'], ['Ghép chuyến & thu gom', 'Kết nối nguồn thải với đội xe và nhà máy phù hợp. Gom nhiều điểm trên cùng tuyến để tối ưu tải trọng, hạn chế xe chạy rỗng.'], ['Xác nhận & ghi nhận giá trị', 'Xác nhận giao nhận bằng QR, số hóa chứng từ E-Manifest và dữ liệu kế toán xanh, làm cơ sở theo dõi tái chế và báo cáo ESG.']].map(([title, text], index) => <article className="step" key={title}><span className="step-number">0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+        <section className="actions-section section" id="hanh-dong" aria-labelledby="actions-title"><div className="container"><div className="section-heading"><div><span className="eyebrow">BA DÒNG PHẾ THẢI, MỘT HỆ SINH THÁI</span><h2 id="actions-title">Khơi mở giá trị từ phế thải đặc thù.</h2></div><span className="section-aside">Mũi nhọn trước, hệ sinh thái sau.</span></div><div className="actions-grid">{actions.map(action => <Reveal key={action.tag}><TiltSurface className="action-tilt" maxTilt={6}><article className={`action-card ${action.className}`}><div className="action-art"><Icon name={action.icon} /><span className="art-orbit" /><span className="art-spark">✳</span><span className="art-caption">GOM · CIRCULAR ECONOMY</span></div><div className="action-content"><span className="eyebrow">{action.tag}</span><h3>{action.title}</h3><p>{action.description}</p><div className="suggestion"><Icon name="check" /><span>{action.suggestion}</span></div></div></article></TiltSurface></Reveal>)}</div><p className="action-disclaimer">Định hướng trao đổi tuần hoàn: phế thải xây dựng đổi vật liệu tái chế, phụ phẩm nông nghiệp đổi phân bón hữu cơ.</p></div></section>
         <TechnologySection />
         <EcosystemSection />
         <RoadmapSection />
-        <section className="faq-section section" id="cau-hoi" aria-labelledby="faq-title"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">HIỂU THÊM VỀ DỰ ÁN</span><h2 id="faq-title">Công nghệ kết nối.<br />Giá trị cho doanh nghiệp.</h2><p>Tìm hiểu mô hình B2B, định giá AI, chứng từ điện tử và định hướng tài chính xanh của ReLoop Vietnam.</p><div className="faq-leaf"><Icon /></div></div><div className="faq-list">{questions.map(([question, answer]) => <details key={question}><summary>{question}<Icon name="plus" /></summary><p>{answer}</p></details>)}</div></div></section>
+        <section className="faq-section section" id="cau-hoi" aria-labelledby="faq-title"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">HIỂU THÊM VỀ DỰ ÁN</span><h2 id="faq-title">Công nghệ kết nối.<br />Giá trị cho doanh nghiệp.</h2><p>Tìm hiểu mô hình B2B, định giá AI, chứng từ điện tử và định hướng tài chính xanh của GOM.</p><div className="faq-leaf"><Icon /></div></div><div className="faq-list">{questions.map(([question, answer]) => <details key={question}><summary>{question}<Icon name="plus" /></summary><p>{answer}</p></details>)}</div></div></section>
         <section className="closing-section"><div className="container closing-content"><span className="eyebrow">CÙNG XÂY DỰNG HỆ SINH THÁI TUẦN HOÀN</span><h2>Phế thải hôm nay.<br />Nguồn lực cho ngày mai.</h2><p>Kết nối đơn vị phát thải, đội xe và nhà máy tái chế để cùng tạo giá trị.</p><a className="button button-primary" href="#hanh-dong">Tìm hiểu các lĩnh vực</a><span className="closing-decoration"><Icon /></span></div></section>
       </main>
     </div>
-    <footer className="site-footer"><div className="container footer-top"><div><Brand /><p>Kết nối phế thải. Kiến tạo giá trị tuần hoàn.</p></div><nav aria-label="Liên kết cuối trang"><a href="#cong-nghe">Công nghệ</a><a href="#he-sinh-thai">Hệ sinh thái</a><a href="#lo-trinh">Lộ trình</a><a href="#cau-hoi">Câu hỏi thường gặp</a></nav></div><div className="container footer-bottom"><span>© {currentYear} NetZeroHeros.</span><span>ReLoop Vietnam · Nhóm Net Zero Heroes<Icon /></span></div></footer>
+    <footer className="site-footer"><div className="container footer-top"><div><Brand /><p>Kết nối phế thải. Kiến tạo giá trị tuần hoàn.</p></div><nav aria-label="Liên kết cuối trang"><a href="#cong-nghe">Công nghệ</a><a href="#he-sinh-thai">Hệ sinh thái</a><a href="#lo-trinh">Lộ trình</a><a href="#cau-hoi">Câu hỏi thường gặp</a></nav></div><div className="container footer-bottom"><span>© {currentYear} NetZeroHeroes.</span><span>GOM · Nhóm NetZeroHeroes<Icon /></span></div></footer>
   </>
 }
 export default App

@@ -22,7 +22,7 @@ export function Reveal({ children, className = '', delay = 0 }) {
 
 export function MarketSection() {
   return <section className="market-section section" aria-labelledby="market-title"><div className="container">
-    <Reveal className="section-heading"><div><span className="eyebrow">VÌ SAO CHÚNG TÔI BẮT ĐẦU</span><h2 id="market-title">Tài nguyên chưa hết giá trị.<br />Chỉ đang thiếu một kết nối.</h2></div><p>ReLoop Vietnam bắt đầu từ những điểm đứt gãy trong hành trình thu gom và tái chế phế thải của doanh nghiệp.</p></Reveal>
+    <Reveal className="section-heading"><div><span className="eyebrow">VÌ SAO CHÚNG TÔI BẮT ĐẦU</span><h2 id="market-title">Tài nguyên chưa hết giá trị.<br />Chỉ đang thiếu một kết nối.</h2></div><p>GOM bắt đầu từ những điểm đứt gãy trong hành trình thu gom và tái chế phế thải của doanh nghiệp.</p></Reveal>
     <div className="market-grid">{[
       ['Giá thu mua thiếu minh bạch', 'Giao dịch phân tán, khó đánh giá chất lượng và tạp chất khiến bên bán lẫn bên mua thiếu cơ sở để thống nhất giá.', 'Dữ liệu vật liệu rõ ràng hơn'],
       ['Vận chuyển chưa tối ưu', 'Nguồn thải nhỏ lẻ, lịch thu gom rời rạc và xe chạy rỗng làm tăng chi phí, nhất là với vật liệu cồng kềnh.', 'Kết nối cùng tuyến, cùng nhu cầu'],
@@ -60,7 +60,7 @@ export function EcosystemSection() {
   const [selected, setSelected] = useState(0)
   const audience = audiences[selected]
   return <section className="ecosystem-section section" id="he-sinh-thai" aria-labelledby="ecosystem-title"><div className="container">
-    <Reveal className="ecosystem-heading"><span className="eyebrow">MỖI MẮT XÍCH, MỘT GIÁ TRỊ</span><h2 id="ecosystem-title">Cùng tham gia.<br />Cùng tạo lợi ích.</h2><p>ReLoop Vietnam hướng đến một mạng lưới cộng tác, nơi nhu cầu của bên này trở thành cơ hội cho bên khác.</p></Reveal>
+    <Reveal className="ecosystem-heading"><span className="eyebrow">MỖI MẮT XÍCH, MỘT GIÁ TRỊ</span><h2 id="ecosystem-title">Cùng tham gia.<br />Cùng tạo lợi ích.</h2><p>GOM hướng đến một mạng lưới cộng tác, nơi nhu cầu của bên này trở thành cơ hội cho bên khác.</p></Reveal>
     <Reveal><div className="audience-options" role="group" aria-label="Lợi ích theo đối tượng">{audiences.map((item, index) => <button type="button" key={item.name} aria-pressed={selected === index} aria-controls="audience-content" onClick={() => setSelected(index)}>{item.name}</button>)}</div><div className="audience-panel" id="audience-content"><EcoOrbit3D selected={selected} onSelect={setSelected} /><div id="audience-description" className="audience-copy" key={audience.name} aria-live="polite" aria-atomic="true"><span className="eyebrow">{audience.type}</span><h3>{audience.title}</h3><p>{audience.description}</p><ul>{audience.benefits.map(benefit => <li key={benefit}>{benefit}</li>)}</ul><a className="ecosystem-link" href="#lo-trinh">Tìm hiểu lộ trình của dự án</a></div></div></Reveal>
   </div></section>
 }
@@ -73,6 +73,6 @@ export function RoadmapSection() {
       { period: 'THÁNG 7 – 12', title: 'Mở rộng sang pin xe điện', text: 'Phát triển phân hệ pin và ắc quy tại Hà Nội, Bắc Ninh; bổ sung dữ liệu sức khỏe pin và định hướng hồ sơ tín dụng xanh.', items: ['Đánh giá sức khỏe pin (SoH)', 'Phân luồng tái sử dụng / tái chế', 'Báo cáo ESG & Green Score'] },
       { period: 'THÁNG 13 – 18', title: 'Kết nối sinh khối nông nghiệp', text: 'Mở rộng đến phụ phẩm nông nghiệp tại các tỉnh phía Bắc, kết nối nhu cầu sinh khối và từng bước phát triển cơ chế cộng gộp carbon.', items: ['Nguồn phụ phẩm theo mùa vụ', 'Nhà máy sinh khối & phân hữu cơ', 'Định hướng cộng gộp tín chỉ carbon'] },
     ].map((phase, index) => <Reveal key={phase.period} delay={index * 90}><article className="roadmap-card"><span className="roadmap-point" aria-hidden="true" /><span className="eyebrow">{phase.period}</span><h3>{phase.title}</h3><p>{phase.text}</p><ul>{phase.items.map(item => <li key={item}>{item}</li>)}</ul></article></Reveal>)}</div>
-    <Reveal><div className="team-note"><span className="team-emblem" aria-hidden="true">✳</span><div><span className="eyebrow">NHÓM NET ZERO HEROES</span><h3>Kết nối công nghệ với tư duy kinh tế xanh.</h3><p>Dự án được phát triển từ Trường Kinh tế, Đại học Công nghiệp Hà Nội, kết hợp các hướng chuyên môn tài chính – kế toán, ESG, vận hành và công nghệ số.</p></div></div></Reveal>
+    <Reveal><div className="team-note"><span className="team-emblem" aria-hidden="true">✳</span><div><span className="eyebrow">NHÓM NETZEROHEROES</span><h3>Kết nối công nghệ với tư duy kinh tế xanh.</h3><p>Dự án được phát triển từ Trường Kinh tế, Đại học Công nghiệp Hà Nội, kết hợp các hướng chuyên môn tài chính – kế toán, ESG, vận hành và công nghệ số.</p></div></div></Reveal>
   </div></section>
 }

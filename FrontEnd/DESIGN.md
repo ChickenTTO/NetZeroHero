@@ -1,12 +1,12 @@
-# NetZeroHeros — Hướng dẫn thiết kế giao diện
+# NetZeroHeroes — Hướng dẫn thiết kế giao diện
 
 ## Phạm vi và hiện trạng
 
-Tài liệu này định hướng thiết kế frontend NetZeroHeros: giúp người dùng hiểu tác động môi trường và tiếp cận các hành động giảm phát thải bằng một giao diện rõ ràng, tích cực, dễ sử dụng.
+Tài liệu này định hướng thiết kế frontend NetZeroHeroes: giúp người dùng hiểu tác động môi trường và tiếp cận các hành động giảm phát thải bằng một giao diện rõ ràng, tích cực, dễ sử dụng.
 
 Hiện tại, `src/App.jsx`, `src/App.css` và `src/index.css` vẫn là giao diện khởi tạo React/Vite. Dự án sử dụng React, Vite và CSS thuần; chưa cài Tailwind hay thư viện UI. Các màn hình, thành phần và token bên dưới là **đề xuất để triển khai**, chưa phản ánh chức năng đang hoạt động. Thư mục `BackEnd` chưa có mã nguồn để xác nhận hợp đồng dữ liệu.
 
-Tên hiển thị trong giao diện dùng **NetZeroHeros** theo định hướng dự án; tên thư mục repository `NetZeroHero` được giữ nguyên. Khi có yêu cầu nghiệp vụ hoặc nhận diện chính thức, cập nhật tài liệu này trước khi mở rộng giao diện.
+Tên hiển thị trong giao diện dùng **NetZeroHeroes** theo định hướng dự án; tên thư mục repository `NetZeroHero` được giữ nguyên. Tên dự án chính thức là **GOM**, do nhóm **NetZeroHeroes** phát triển. Trang Home ưu tiên giới thiệu GOM và mô hình kết nối phế thải B2B, vận tải, tái chế, chứng từ điện tử và tài chính xanh.
 
 ## Tinh thần sản phẩm
 
@@ -23,7 +23,7 @@ Chỉ đưa mục điều hướng lên giao diện khi có nội dung hoặc lu
 
 | Khu vực | Mục đích | Nội dung và hành động đề xuất |
 |---------|----------|-----------------------------|
-| Trang chủ | Giới thiệu giá trị của NetZeroHeros | Hero, cách tham gia, ví dụ hành động, CTA “Bắt đầu hành trình xanh” |
+| Trang chủ | Giới thiệu giá trị của NetZeroHeroes | Hero, cách tham gia, ví dụ hành động, CTA “Bắt đầu hành trình xanh” |
 | Tổng quan | Giúp người dùng đọc nhanh tình hình | Chỉ số theo kỳ, xu hướng, tiến độ mục tiêu, hành động tiếp theo |
 | Hoạt động | Ghi nhận dữ liệu đầu vào | Danh sách và biểu mẫu cho các nhóm như di chuyển, năng lượng, sinh hoạt |
 | Mục tiêu | Theo dõi kế hoạch giảm phát thải | Mốc thời gian, mức cơ sở, mục tiêu, tiến độ |
@@ -97,7 +97,7 @@ Trên màn hình hẹp, đổi bảng thành danh sách nếu vẫn giữ đư�
 
 ### Navigation
 
-Hiển thị wordmark NetZeroHeros, các mục đang có và một CTA chính. Landing page có thể dùng thanh nổi bo góc trên nền rừng. Trang ứng dụng có thể dùng header hoặc sidebar khi số lượng màn hình cần thiết; không ép mọi luồng vào thanh pill.
+Hiển thị wordmark NetZeroHeroes, các mục đang có và một CTA chính. Landing page có thể dùng thanh nổi bo góc trên nền rừng. Trang ứng dụng có thể dùng header hoặc sidebar khi số lượng màn hình cần thiết; không ép mọi luồng vào thanh pill.
 
 Menu mobile có nút mở với nhãn truy cập, `aria-expanded`, điều khiển bằng bàn phím và đóng được bằng Escape. Dùng `aria-current="page"` cho trang đang chọn.
 
@@ -107,7 +107,7 @@ Ví dụ nội dung:
 
 > **Mỗi hành động nhỏ, một tương lai xanh hơn.**
 >
-> Cùng NetZeroHeros hiểu tác động của thói quen hằng ngày và bắt đầu những thay đổi phù hợp với bạn.
+> Cùng NetZeroHeroes hiểu tác động của thói quen hằng ngày và bắt đầu những thay đổi phù hợp với bạn.
 
 CTA đề xuất: “Bắt đầu hành trình xanh”; liên kết phụ: “Tìm hiểu cách hoạt động”. Chỉ liên kết đến trang hoặc khu vực có thật. Có thể minh họa bằng lá, vòng tăng trưởng hoặc preview sản phẩm; preview dùng dữ liệu mẫu phải được ghi nhãn.
 
@@ -244,7 +244,7 @@ Mục tiêu thiết kế là WCAG 2.2 mức AA; cần kiểm tra thực tế tr�
 
 ## Tiêu chí kiểm tra khi triển khai
 
-- Tên NetZeroHeros, thuật ngữ, màu sắc và đơn vị nhất quán trên mọi màn hình.
+- Tên NetZeroHeroes, thuật ngữ, màu sắc và đơn vị nhất quán trên mọi màn hình.
 - Mỗi CTA dẫn đến luồng hoạt động; nội dung mẫu có nhãn, không có thành tích tự tạo.
 - Kiểm tra ở chiều rộng 320px, 768px và desktop, với nhãn tiếng Việt dài và phóng to 200%.
 - Kiểm tra bàn phím, focus, độ tương phản, thông báo lỗi và chế độ giảm chuyển động.

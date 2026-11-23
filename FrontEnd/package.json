@@ -7,9 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
+    "test:workspace": "node --test scripts/check-workspace.mjs",
+    "test:pdf": "node --test scripts/check-pdf.mjs",
+    "test:roles": "node --test scripts/check-roles.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.9",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "three": "^0.187.0"
